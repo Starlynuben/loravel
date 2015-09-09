@@ -29,15 +29,15 @@ Route::get('contact', function () {
   
 });
 
-Route::get('types', function () {
+Route::get('types/{id}', function ($id) {
 
-	$type = \App\Models\Type::find(1);
+	$type = \App\Models\Type::find($id);
 
 	return view('types',['type'=> $type]);
   
 });
 
+Route::get('products/create', function() {
 
-
-
-
+	return view('createProducts');
+});

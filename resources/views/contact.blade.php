@@ -20,4 +20,4 @@
 				</fielset>
 			</form>
 	
-@endsection			
+@stop			

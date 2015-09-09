@@ -8,4 +8,4 @@
 	<p>Alias, ut sit maiores debitis dolorum nam error libero, consequuntur distinctio quia dolorem quis. Ea ad aliquam harum eum sint?</p>
 	<p>Neque dolorem, aut, provident deleniti velit tempore hic modi ex vitae nesciunt tempora reprehenderit libero magni quis rem aliquam! Dicta.</p>
 
-@endsection			
+@stop			
