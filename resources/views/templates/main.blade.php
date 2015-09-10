@@ -60,7 +60,7 @@
 					<li><a href="">Login <i class="icon-lock"></i></a></li>
 					<li><a href="" >2 items <i class="icon-shopping-cart"></i></a></li>
 					<li><a href="">About</a></li>
-					<li><a href="">Contact</a></li>
+					<li><a href="/laravel/public/contact">Contact</a></li>
 					
 				</ul>
 			</nav>

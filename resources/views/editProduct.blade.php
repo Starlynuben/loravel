@@ -3,7 +3,7 @@
 
 @section('content')
 
-	<h2>Add new Product</h2>
+	<h2>Edit Product</h2>
 			
 	{!! Form::open(array('url' => 'products')) !!}
 		<fielset>
@@ -25,7 +25,7 @@
 			{!! Form::label('photo', 'Photo') !!}
 			{!! Form::text('photo', "shubunkin.jpg") !!}
 
-			<input type="submit" value="Create product">
+			<input type="submit" value="Update product">
 		</fielset>
 	{!! Form::close() !!}
 	
