@@ -5,7 +5,7 @@
 
 	<h2>Edit Product</h2>
 			
-	{!! Form::open(array('url' => 'products')) !!}
+	{!! Form::model($product,array('url' => 'products/'.$product->id,'method'=>'put')) !!}
 		<fielset>
 			{!! Form::label('name', 'Product name');!!}
 			{!! Form::text('name') !!}

@@ -5,7 +5,7 @@
 
 	<h2>Add new Product</h2>
 			
-	{!! Form::open(array('url' => 'products')) !!}
+	{!! Form::open(['url' => 'products','files'=>true]) !!}
 		<fielset>
 			{!! Form::label('name', 'Product name');!!}
 			{!! Form::text('name') !!}
@@ -23,7 +23,7 @@
 			{!! $errors->first('price','<p class="error">:message<p>')!!}
 
 			{!! Form::label('photo', 'Photo') !!}
-			{!! Form::text('photo', "shubunkin.jpg") !!}
+			{!! Form::file('photo') !!}
 
 			<input type="submit" value="Create product">
 		</fielset>

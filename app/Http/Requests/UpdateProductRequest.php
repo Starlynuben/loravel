@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class CreateProductRequest extends Request
+class UpdateProductRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,9 +25,7 @@ class CreateProductRequest extends Request
     {
         return [
             "name"=>"required",
-            "description"=>"required",
-            "price"=>"required",
-            "photo"=>"required"
+            "description"=>"required"
         ];
     }
 }
