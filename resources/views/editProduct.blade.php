@@ -23,7 +23,7 @@
 			{!! $errors->first('price','<p class="error">:message<p>')!!}
 
 			{!! Form::label('photo', 'Photo') !!}
-			{!! Form::text('photo', "shubunkin.jpg") !!}
+			{!! Form::file('photo') !!}
 
 			<input type="submit" value="Update product">
 		</fielset>
