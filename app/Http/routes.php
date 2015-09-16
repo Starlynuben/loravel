@@ -32,5 +32,5 @@ Route::resource('products', 'ProductsController');
 Route::resource('users', 'UsersController');
 
 Route::get('login',"LoginController@showLoginForm");
-Route::get('processLogin',"LoginController@processLogin");
+Route::post('processLogin',"LoginController@processLogin");
 Route::get('logout',"LoginController@logout");

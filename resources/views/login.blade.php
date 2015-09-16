@@ -5,7 +5,7 @@
 
 	<h2>Login</h2>
 			
-	{!! Form::open(['url' => 'login']) !!}
+	{!! Form::open(['url' => 'processLogin']) !!}
 		<fielset>
 
 			{!! Form::label('username', 'Username');!!}
@@ -16,8 +16,10 @@
 			{!! Form::password('password') !!}
 			{!! $errors->first('password','<p class="error">:message<p>')!!}
 
-			<input type="submit" value="Register">
+			<input type="submit" value="Login">
 		</fielset>
 	{!! Form::close() !!}
+
+	{{Session::get("message")}}
 	
 @stop			
