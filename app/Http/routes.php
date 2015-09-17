@@ -34,3 +34,5 @@ Route::resource('users', 'UsersController');
 Route::get('login',"LoginController@showLoginForm");
 Route::post('processLogin',"LoginController@processLogin");
 Route::get('logout',"LoginController@logout");
+
+Route::get('cart',"CartController@showCart");

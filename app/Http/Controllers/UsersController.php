@@ -7,12 +7,16 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\UpdateUserRequest;
+
 class UsersController extends Controller
 {
 
     public function __construct(){
 
         $this->middleware('auth', ['except' => ['create','store']]);
+        $this->middleware('account',['except' => ['create','store']]);
     }
 
 
@@ -42,7 +46,7 @@ class UsersController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(\App\Http\Requests\CreateUserRequest $request)
+    public function store(CreateUserRequest $request)
     {
         $user = \App\Models\User::create($request->all());
 
@@ -85,7 +89,7 @@ class UsersController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(\App\Http\Requests\UpdateUserRequest $request, $id)
+    public function update(UpdateUserRequest $request, $id)
     {
         $user = \App\Models\User::find($id);
 
