@@ -12,8 +12,8 @@ class ProductsController extends Controller
 
     public function __construct(){
 
-        $this->middleware('auth');
-        $this->middleware('admin');
+        $this->middleware('auth',['except'=>['show']]);
+        $this->middleware('admin',['except'=>['show']]);
     }
     /**
      * Display a listing of the resource.
@@ -62,7 +62,8 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        
+        $product = \App\Models\Product::find($id);
+        return view('product',["product"=>$product]);
     }
 
     /**

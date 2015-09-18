@@ -19,12 +19,12 @@
 		@endforeach
 
 		<div>
-			<span></span><span></span><span><h4>Total</h4></span><span><h4>{{Cart::total()}}</h4></span>
+			<span></span><span></span><span><h4>Total</h4></span><span><h4>{{'$ '.Cart::total()}}</h4></span>
 		</div>
 	</div>
 
-	<form method="POST" action="">
+	{!! Form::open(["url"=>"orders"])!!}
 		<input type="submit" value="Checkout">
-	</form>
+	{!! Form::close()!!}
 	
 @stop			
